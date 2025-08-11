@@ -1,0 +1,225 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    color: #2c3e50;
+    padding: 40px;
+}
+
+.container {
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 32px 36px 40px 36px;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(60,60,120,0.1), 0 1.5px 5px rgba(60,60,120,0.07);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #273c75;
+    margin-bottom: 32px;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+h3, h4 {
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* Nút chức năng */
+button {
+    padding: 7px 18px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 22px;
+    font-size: 0.97rem;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 95px;
+    min-height: 35px;
+    transition: background 0.18s, color 0.16s, box-shadow 0.17s, transform 0.13s;
+    box-shadow: 0 1.5px 7px 0 rgba(0, 206, 209, 0.09);
+    
+    color: #fff;
+}
+
+button:hover {
+    filter: brightness(1.12);
+    box-shadow: 0 3px 14px 0 rgba(9, 132, 227, 0.17);
+    transform: translateY(-2px) scale(1.029);
+}
+
+/* Nút Đăng xuất riêng biệt */
+button.logout {
+    float: right;
+    background: linear-gradient(90deg, #ff7675, #d63031);
+    color: #fff;
+}
+
+button.logout:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 3px 14px 0 rgba(214, 48, 49, 0.2);
+    transform: translateY(-2px) scale(1.029);
+}
+
+.btn-check-in {
+    background: linear-gradient(90deg, #00b894, #00cec9);
+}
+
+.btn-check-out {
+    background: linear-gradient(90deg, #ff7675, #d63031);
+}
+
+/* Thẻ kết quả chấm công */
+#result {
+    background-color: #fdfdfd;
+    border: 1.5px solid #dcdde1;
+    padding: 18px;
+    margin-top: 22px;
+    font-family: 'Courier New', monospace;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px 0 rgba(44,62,80,0.06);
+    white-space: pre-line;
+}
+
+/* Khu vực thông tin tổng kết */
+#summary {
+    margin-top: 25px;
+    background-color: #f4f7fa;
+    padding: 20px 24px;
+    border-left: 4px solid #00b894;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px 0 rgba(44,62,80,0.07);
+}
+
+#summary p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #34495e;
+}
+
+/* SCROLLBAR STYLING */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00b894, #0984e3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0984e3, #00b894);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+    .container {
+        max-width: 90%;
+        padding: 25px 20px 30px 20px;
+    }
+    
+    h1, h2 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        max-width: 95%;
+        padding: 20px 15px 25px 15px;
+        margin: 20px auto;
+    }
+    
+    h1, h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    button {
+        min-width: 85px;
+        font-size: 0.95rem;
+    }
+    
+    #result, #summary {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 15px 10px 20px 10px;
+        margin: 15px auto;
+        border-radius: 15px;
+    }
+    
+    h1, h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px 15px;
+    }
+
+    button.logout {
+        float: none;
+        width: 100%;
+    }
+    
+    #result, #summary {
+        border-radius: 10px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 10px 8px 15px 8px;
+        border-radius: 12px;
+    }
+    
+    h1, h2 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    
+    button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        min-width: 70px;
+        min-height: 30px;
+    }
+    
+    #summary p {
+        font-size: 14px;
+    }
+}

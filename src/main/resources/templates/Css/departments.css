@@ -1,0 +1,463 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    color: #2c3e50;
+    padding: 40px;
+}
+
+.container {
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 32px 36px 40px 36px;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(60,60,120,0.1), 0 1.5px 5px rgba(60,60,120,0.07);
+}
+
+h1 {
+    text-align: center;
+    color: #273c75;
+    margin-bottom: 32px;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+    color: #34495e;
+    margin: 30px 0 20px 0;
+    font-size: 1.6rem;
+}
+
+ /* BUTTONS */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-bottom: 22px;
+}
+.btn-add, .btn-back {
+    padding: 7px 18px;
+    border: none;
+    border-radius: 22px;
+    font-size: 0.97rem;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 95px;
+    min-height: 35px;
+    transition: background 0.18s, color 0.16s, box-shadow 0.17s, transform 0.13s;
+    box-shadow: 0 1.5px 7px 0 rgba(0, 206, 209, 0.09);
+}
+
+.btn-add {
+    background: linear-gradient(90deg, #00b894, #00cec9);
+    color: #fff;
+}
+.btn-back {
+    background: linear-gradient(90deg, #ffe259 50%, #ffa751 100%);
+    color: #2d3436;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.btn-back:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 5px 16px 0 rgba(255, 226, 89, 0.13);
+    transform: translateY(-1px) scale(1.035);
+}
+
+/* SEARCH BAR BEAUTY */
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: stretch;
+    width: 70%;
+    min-width: 230px;
+    max-width: 900px;
+    border-radius: 30px;
+    background: #f4f8fb;
+    box-shadow: 0 2px 12px rgba(0,184,148,0.07);
+    overflow: hidden;
+    border: 1.5px solid #dcdde1;
+    transition: box-shadow 0.18s, border 0.2s;
+    position: relative;
+}
+
+.search-bar:focus-within {
+    border: 1.5px solid #00b894;
+    box-shadow: 0 2px 18px rgba(0,184,148,0.12);
+}
+
+#searchInput {
+    flex: 1;
+    padding: 13px 18px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.09rem;
+    color: #222f3e;
+    border-radius: 0;
+    transition: background 0.2s;
+    
+}
+
+#searchInput:focus {
+    background: #eafaf1;
+}
+
+#departmentTable {
+    width: 100%;
+    max-width: 1200px;
+    margin: 22px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 16px 0 rgba(44,62,80,0.06);
+    background: #fdfdfd;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+thead {
+    background: linear-gradient(90deg, #00b894, #0984e3);
+    color: white;
+}
+
+th, td {
+    padding: 11px 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#departmentTable thead {
+    font-size: 1.03rem;
+    font-weight: 600;
+}
+
+#departmentTable tbody tr {
+    transition: background 0.18s;
+}
+
+#departmentTable tbody tr:hover {
+    background: #f1f2f6;
+}
+
+#departmentTable td {
+    color: #34495e;
+    font-size: 0.98rem;
+}
+
+#departmentTable td:last-child {
+    min-width: 120px;
+}
+
+td button {
+    margin: 0 2px;
+    min-width: 55px;
+    padding: 5px 10px;
+    background: linear-gradient(90deg, #00b894 80%, #00cec9 100%);
+    color: #fff;
+    border-radius: 15px;
+    font-size: 0.93rem;
+    font-weight: 500;
+    border: none;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+}
+
+td button:hover {
+    background: linear-gradient(90deg, #0984e3 80%, #00b894 100%);
+    color: #fff;
+    filter: brightness(1.09);
+    box-shadow: 0 3px 14px 0 rgba(9, 132, 227, 0.13);
+    transform: translateY(-1.5px) scale(1.02);
+}
+
+#departmentForm {
+    max-width: 600px;
+    margin: 38px auto 0 auto;
+    padding: 24px 20px 20px 20px;
+    background: #f4f7fa;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(44,62,80,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#departmentForm h3 {
+    color: #2980b9;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1.13rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#departmentForm label {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.95rem;
+}
+
+#departmentForm input {
+    width: 100%;
+    padding: 8px 13px;
+    border: 1.5px solid #dcdde1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.95rem;
+    background: #f4f8fb;
+    color: #222f3e;
+    transition: border 0.2s, background 0.2s;
+    box-sizing: border-box;
+}
+
+#departmentForm input:focus {
+    border: 1.5px solid #00b894;
+    background: #eafaf1;
+    box-shadow: 0 0 5px rgba(0, 184, 148, 0.2);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#departmentForm button[type="submit"] {
+    background: linear-gradient(90deg, #00b894, #00cec9);
+    color: white;
+    width: 48%;
+    font-weight: 600;
+}
+
+#departmentForm button[type="button"] {
+    background: linear-gradient(90deg, #ff7675, #d63031);
+    color: white;
+    width: 48%;
+    font-weight: 600;
+}
+
+#departmentForm button:hover {
+    filter: brightness(1.12);
+    box-shadow: 0 3px 14px 0 rgba(9, 132, 227, 0.17);
+    transform: translateY(-2px) scale(1.029);
+}
+
+/* SCROLLBAR STYLING */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00b894, #0984e3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0984e3, #00b894);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+    .container {
+        max-width: 90%;
+        padding: 25px 20px 30px 20px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .search-bar {
+        width: 85%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        max-width: 95%;
+        padding: 20px 15px 25px 15px;
+        margin: 20px auto;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    button {
+        min-width: 85px;
+        font-size: 0.95rem;
+    }
+    
+    .search-bar {
+        width: 100%;
+    }
+    
+    #searchInput {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+    
+    #departmentTable th, #departmentTable td {
+        padding: 10px 6px;
+    }
+    
+    #departmentForm {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 15px 10px 20px 10px;
+        margin: 15px auto;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    #departmentTable, thead, tbody, th, td, tr {
+        font-size: 0.9rem;
+    }
+    
+    #departmentTable {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    
+    td button {
+        padding: 4px 8px;
+        min-width: 45px;
+        font-size: 0.85rem;
+    }
+    
+    #departmentForm {
+        padding: 15px;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #departmentForm button[type="submit"],
+    #departmentForm button[type="button"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 10px 8px 15px 8px;
+        border-radius: 12px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    
+    button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        min-width: 70px;
+        min-height: 30px;
+    }
+    
+    #searchInput {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
+    
+    #departmentTable,
+    #departmentTable thead,
+    #departmentTable tbody,
+    #departmentTable th,
+    #departmentTable td,
+    #departmentTable tr {
+        display: block;
+        width: 100%;
+    }
+    
+    #departmentTable thead tr {
+        display: none;
+    }
+    
+    #departmentTable tr {
+        margin-bottom: 12px;
+        border-radius: 8px;
+        background: #f4f7fa;
+        box-shadow: 0 1px 6px 0 rgba(44,62,80,0.04);
+    }
+    
+    #departmentTable td {
+        padding: 10px 6px;
+        text-align: left;
+        position: relative;
+        border-bottom: 1px solid #e5e7ea;
+        font-size: 0.95rem;
+    }
+    
+    #departmentTable td:last-child {
+        border-bottom: none;
+    }
+    
+    #departmentTable td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #2d3436;
+        display: block;
+        margin-bottom: 2px;
+        font-size: 0.86em;
+        opacity: 0.9;
+    }
+}

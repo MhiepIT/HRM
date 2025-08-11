@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thống kê nhân sự</title>
+    <script src="/templates/Js/Statistic.js"></script>
+    <link rel="stylesheet" href="/templates/Css/Statistic.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>Thống kê </h1>
+<button class="btn-back" onclick="goBack()">Quay lại</button>
+
+<div class="top-charts">
+    <div class="chart-card">
+
+        <canvas id="barChart"></canvas>
+    </div>
+    <div class="chart-card">
+        <canvas id="lineChart"></canvas>
+    </div>
+</div>
+
+<div class="bottom-chart chart-card">
+    <canvas id="pieChart"></canvas>
+</div>
+</body>
+<script>
+    function goBack() {
+        const ref = document.referrer;
+
+        if (ref.includes("admin")) {
+            window.location.href = "/admin";
+        } else if (ref.includes("accountant")) {
+            window.location.href = "/accountant";
+        } else if (ref.includes("manager")) {
+            window.location.href = "/manager";
+        } else if (ref.includes("hr")) {
+            window.location.href = "/hr";
+        } else if (ref.includes("employee")) {
+            window.location.href = "/employee";
+        } else {
+            window.location.href = "/login";
+        }
+    }
+</script>
+</html>

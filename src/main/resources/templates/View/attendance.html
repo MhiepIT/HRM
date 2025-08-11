@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chấm công nhân viên</title>
+    <link rel="stylesheet" href="/templates/Css/attendance.css">
+    <script src="/templates/Js/attendance.js" defer></script>
+</head>
+<body>
+
+<h2> Chấm công </h2>
+<button onclick="logout()" style="float: right; background-color: #dc3545;">Đăng xuất</button>
+
+<div id="actionSection">
+    <h3>Nhân viên: <span id="selectedName">Đang tải...</span></h3>
+    <button onclick="checkIn()" class="btn-check-in">✅ Check In</button>
+    <button onclick="checkOut()" class="btn-check-out">🕒 Check Out</button>
+
+    <h4>Kết quả:</h4>
+    <pre id="result">...</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>💬 Chat nhóm nội bộ</title>
+    <link rel="stylesheet" href="/templates/Css/text.css">
+    <script src="/templates/Js/text.js" defer></script>
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">
+        <h2>Xin chào, <span id="username"></span> 👋</h2>
+    </div>
+    <div id="messageList" class="chat-messages">
+    </div>
+    <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Nhập tin nhắn..." />
+        <button onclick="sendMessage()">Gửi</button>
+    </div>
+    <button class="btn-back" onclick="goBack()">Quay lại</button>
+</div>
+</body>
+<script>
+    function goBack() {
+        const ref = document.referrer;
+
+        if (ref.includes("admin")) {
+            window.location.href = "/admin";
+        } else if (ref.includes("accountant")) {
+            window.location.href = "/accountant";
+        } else if (ref.includes("manager")) {
+            window.location.href = "/manager";
+        } else if (ref.includes("hr")) {
+            window.location.href = "/hr";
+        } else if (ref.includes("employee")) {
+            window.location.href = "/employee";
+        } else {
+            window.location.href = "/login";
+        }
+    }
+</script>
+</html>

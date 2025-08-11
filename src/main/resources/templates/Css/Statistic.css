@@ -1,0 +1,97 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #2c3e50;
+}
+
+.btn-back {
+    background: linear-gradient(90deg, #ffe259 50%, #ffa751 100%);
+    color: #2d3436;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.btn-excel, .btn-add, .btn-back {
+    padding: 7px 18px;
+    border: none;
+    border-radius: 22px;
+    font-size: 0.97rem;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 95px;
+    min-height: 35px;
+    transition: background 0.18s, color 0.16s, box-shadow 0.17s, transform 0.13s;
+    box-shadow: 0 1.5px 7px 0 rgba(0, 206, 209, 0.09);
+}
+
+.container {
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 32px 36px 40px 36px;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(60,60,120,0.1), 0 1.5px 5px rgba(60,60,120,0.07);
+}
+
+h1 {
+    text-align: center;
+    color: #3a4a5d;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.top-charts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chart-card {
+    flex: 1;
+    min-width: 45%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.chart-card h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #444;
+}
+
+.bottom-chart {
+    margin-top: 30px;
+}
+.bottom-chart {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bottom-chart canvas {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+
+
