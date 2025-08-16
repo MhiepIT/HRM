@@ -170,8 +170,10 @@ table {
 }
 
 thead {
-    background: linear-gradient(90deg, #3a4a5d 0%, #4a6282 100%);
+    background: linear-gradient(90deg, #00b894, #0984e3);
     color: white;
+    font-size: 1.03rem;
+    font-weight: 600;
 }
 
 th, td {

@@ -8,6 +8,30 @@ body {
     margin: 0;
 }
 
+.btn-back {
+    padding: 7px 18px;
+    border: none;
+    border-radius: 22px;
+    font-size: 0.97rem;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 95px;
+    min-height: 35px;
+    transition: background 0.18s, color 0.16s, box-shadow 0.17s, transform 0.13s;
+    box-shadow: 0 1.5px 7px 0 rgba(0, 206, 209, 0.09);
+}
+
+.btn-back {
+    background: linear-gradient(90deg, #ffe259 50%, #ffa751 100%);
+    color: #2d3436;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+
 .chat-container {
     width: 700px;
     height: 600px;

@@ -29,8 +29,10 @@ h2, h3 {
 }
 
 .account-table thead {
-    background-color: #2e3b4e;
+    background: linear-gradient(90deg, #00b894, #0984e3);
     color: white;
+    font-size: 1.03rem;
+    font-weight: 600;
     
 }
 
@@ -57,19 +59,43 @@ input {
     border: 1px solid #ccc;
 }
 
-button {
-    margin-top: 20px;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+
+
+
+
+button{
+    background-color:grey;
+}
+.btn-edit, .btn-back {
+    padding: 7px 18px;
     border: none;
-    border-radius: 6px;
+    border-radius: 22px;
+    font-size: 0.97rem;
+    font-weight: 600;
     cursor: pointer;
+    min-width: 95px;
+    min-height: 35px;
+    transition: background 0.18s, color 0.16s, box-shadow 0.17s, transform 0.13s;
+    box-shadow: 0 1.5px 7px 0 rgba(0, 206, 209, 0.09);
+}
+.btn-back {
+    background: linear-gradient(90deg, #ffe259 50%, #ffa751 100%);
+    color: #2d3436;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-button:hover {
-    background-color: #45a049;
+.btn-back:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 5px 16px 0 rgba(255, 226, 89, 0.13);
+    transform: translateY(-1px) scale(1.035);
+}
+
+.btn-edit:hover {
+     background: linear-gradient(90deg, #6c63ff 60%, #00b894 100%);
+    color: #fff;
 }
 
 .btn-logout {
